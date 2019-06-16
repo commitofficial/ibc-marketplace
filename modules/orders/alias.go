@@ -1,9 +1,9 @@
 package orders
 
 import (
-	"github.com/ibc-marketplace/modules/orders/keeper"
-	"github.com/ibc-marketplace/modules/orders/types"
-	"github.com/ibc-marketplace/modules/orders/querier"
+	"ibc-marketplace/modules/orders/keeper"
+	"ibc-marketplace/modules/orders/types"
+	"ibc-marketplace/modules/orders/querier"
 )
 
 type (
@@ -13,9 +13,11 @@ type (
 )
 
 var (
-	NewKeeper     = keeper.NewKeeper
-	NewQuerier    = querier.NewQuerier
-	RegisterCodec = types.RegisterCodec
+	NewKeeper             = keeper.NewKeeper
+	NewQuerier            = querier.NewQuerier
+	RegisterCodec         = types.RegisterCodec
+	MsgCreateMakeOrder    = types.NewMsgCreateMakeOrder
+	SignBytesForMakeOrder = types.SignBytesForMakeOrder
 )
 
 const (

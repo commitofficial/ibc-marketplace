@@ -34,10 +34,23 @@ type BaseMakeOrder struct {
 	QuoteToken       ctypes.Coin
 	MakerAddress     ctypes.AccAddress
 	TakerAddress     ctypes.AccAddress
-	ExpirationHeight int64
+	ExpirationHeight uint64
 	OrderHash        string
-	Signature        string
+	Signature        []byte
 	Status           OrderStatus
+}
+
+func NewBaseMakeOrder(baseToken, quoteToken ctypes.Coin, makerAddress, takerAddress ctypes.AccAddress, height uint64, hash string, sign []byte, status OrderStatus) BaseMakeOrder {
+	return BaseMakeOrder{
+		BaseToken:        baseToken,
+		QuoteToken:       quoteToken,
+		MakerAddress:     makerAddress,
+		TakerAddress:     takerAddress,
+		ExpirationHeight: height,
+		OrderHash:        hash,
+		Signature:        sign,
+		Status:           status,
+	}
 }
 
 func MustMarshalMakeOrder(cdc *codec.Codec, baseMakeOrder BaseMakeOrder) []byte {
@@ -73,4 +86,23 @@ func MustUnMarshalOrdersByAddress(cdc *codec.Codec, value []byte) (OrderHashes, 
 func unMarshalOrderHashes(cdc *codec.Codec, value []byte) (order OrderHashes, err error) {
 	err = cdc.UnmarshalBinaryLengthPrefixed(value, &order)
 	return order, err
+}
+
+func SignBytesForMakeOrder(makerAddress ctypes.AccAddress, baseToken, quoteToken ctypes.Coin, height uint64) []byte {
+	bz, err := MsgCdc.MarshalJSON(struct {
+		BaseToken        ctypes.Coin
+		QuoteToken       ctypes.Coin
+		MakerAddress     ctypes.AccAddress
+		ExpirationHeight uint64
+	}{
+		BaseToken:        baseToken,
+		QuoteToken:       quoteToken,
+		MakerAddress:     makerAddress,
+		ExpirationHeight: height,
+	})
+	
+	if err != nil {
+		panic(err)
+	}
+	return ctypes.MustSortJSON(bz)
 }

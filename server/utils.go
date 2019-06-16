@@ -6,7 +6,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/server"
 	"github.com/spf13/cobra"
 	
-	"github.com/ibc-marketplace/version"
+	"ibc-marketplace/version"
 )
 
 func AddCommands(ctx *server.Context, cdc *codec.Codec, rootCmd *cobra.Command,

@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	ctypes "github.com/comdex-blockchain/types"
 	"github.com/cosmos/cosmos-sdk/codec"
+	ctypes "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/bank"
 )
 

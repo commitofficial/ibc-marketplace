@@ -15,7 +15,7 @@ import (
 	"github.com/tendermint/tendermint/privval"
 	"github.com/tendermint/tendermint/types"
 	
-	"github.com/ibc-marketplace/app"
+	"ibc-marketplace/app"
 	
 	"github.com/cosmos/cosmos-sdk/server"
 )

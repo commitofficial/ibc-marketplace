@@ -20,7 +20,7 @@ import (
 	
 	"github.com/tendermint/tendermint/libs/log"
 	
-	ibc2 "github.com/ibc-marketplace/modules/ibc"
+	ibc2 "ibc-marketplace/modules/ibc"
 )
 
 // flags

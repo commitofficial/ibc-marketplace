@@ -16,7 +16,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/server"
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	
-	"github.com/ibc-marketplace/app"
+	"ibc-marketplace/app"
 )
 
 const (

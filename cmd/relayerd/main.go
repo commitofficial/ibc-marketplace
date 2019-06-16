@@ -19,9 +19,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/store"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	
-	"github.com/ibc-marketplace/app"
-	relayerInit "github.com/ibc-marketplace/app/genesis"
-	rserver "github.com/ibc-marketplace/server"
+	"ibc-marketplace/app"
+	relayerInit "ibc-marketplace/app/genesis"
+	rserver "ibc-marketplace/server"
 )
 
 // relayerd custom flags

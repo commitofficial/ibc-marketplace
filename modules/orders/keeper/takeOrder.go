@@ -3,7 +3,7 @@ package keeper
 import (
 	"sort"
 	
-	"github.com/ibc-marketplace/modules/orders/types"
+	"ibc-marketplace/modules/orders/types"
 	
 	ctypes "github.com/cosmos/cosmos-sdk/types"
 )

@@ -6,7 +6,7 @@ import (
 	"os"
 	"path"
 	
-	client2 "github.com/ibc-marketplace/modules/orders/client"
+	client2 "ibc-marketplace/modules/orders/client"
 	
 	"github.com/cosmos/cosmos-sdk/x/mint"
 	
@@ -24,9 +24,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	
-	"github.com/ibc-marketplace/app"
-	"github.com/ibc-marketplace/modules/orders"
-	"github.com/ibc-marketplace/version"
+	"ibc-marketplace/app"
+	"ibc-marketplace/modules/orders"
+	"ibc-marketplace/version"
 	
 	at "github.com/cosmos/cosmos-sdk/x/auth"
 	auth "github.com/cosmos/cosmos-sdk/x/auth/client/rest"

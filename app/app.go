@@ -24,7 +24,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/slashing"
 	"github.com/cosmos/cosmos-sdk/x/staking"
 	
-	"github.com/ibc-marketplace/modules/orders"
+	"ibc-marketplace/modules/orders"
 )
 
 const (
@@ -185,7 +185,7 @@ func NewRelayerApp(logger log.Logger, db dbm.DB, traceStore io.Writer, loadLates
 		AddRoute(bank.RouterKey, bank.NewHandler(app.bankKeeper)).
 		AddRoute(staking.RouterKey, staking.NewHandler(app.stakingKeeper)).
 		AddRoute(slashing.RouterKey, slashing.NewHandler(app.slashingKeeper)).
-		AddRoute(orders.RouterKey, orders.NewHandler(app.orderKeeper))
+		AddRoute(orders.RouterKey, orders.NewHandler(app.orderKeeper,app.bankKeeper))
 	
 	app.QueryRouter().
 		AddRoute(auth.QuerierRoute, auth.NewQuerier(app.accountKeeper)).

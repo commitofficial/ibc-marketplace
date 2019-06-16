@@ -4,6 +4,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/spf13/cobra"
 	"github.com/tendermint/go-amino"
+	
+	"ibc-marketplace/modules/orders/client/cli"
 )
 
 // ModuleClient exports all client functionality from this module
@@ -38,7 +40,7 @@ func (mc ModuleClient) GetTxCmd() *cobra.Command {
 	}
 	
 	relayerTxCmd.AddCommand(client.PostCommands(
-		// cli.MakeOrderTxCmd(mc.cdc),
+		cli.MakeOrderTxCmd(mc.cdc),
 		// cli.TakeOrderTxCmd(mc.cdc),
 	)...)
 	

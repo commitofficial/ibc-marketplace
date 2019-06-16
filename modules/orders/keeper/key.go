@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	ctypes "github.com/comdex-blockchain/types"
+	ctypes "github.com/cosmos/cosmos-sdk/types"
 )
 
 var (

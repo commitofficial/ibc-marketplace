@@ -3,7 +3,7 @@ package querier
 import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	ctypes "github.com/cosmos/cosmos-sdk/types"
-	"github.com/ibc-marketplace/modules/orders/keeper"
+	"ibc-marketplace/modules/orders/keeper"
 	abci "github.com/tendermint/tendermint/abci/types"
 )
 

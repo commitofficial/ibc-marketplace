@@ -28,7 +28,7 @@ import (
 	authtxb "github.com/cosmos/cosmos-sdk/x/auth/client/txbuilder"
 	"github.com/cosmos/cosmos-sdk/x/staking/client/cli"
 	
-	"github.com/ibc-marketplace/app"
+	"ibc-marketplace/app"
 )
 
 var (

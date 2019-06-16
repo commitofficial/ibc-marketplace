@@ -3,7 +3,7 @@ package ibc
 import (
 	ctypes "github.com/cosmos/cosmos-sdk/types"
 	
-	"github.com/ibc-marketplace/modules/orders"
+	"ibc-marketplace/modules/orders"
 )
 
 const (

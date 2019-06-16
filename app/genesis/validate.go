@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/tendermint/tendermint/types"
 	
-	"github.com/ibc-marketplace/app"
+	"ibc-marketplace/app"
 )
 
 // Validate genesis command takes
