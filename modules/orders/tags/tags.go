@@ -1,7 +1,11 @@
 package tags
 
 var (
-	FromAddress = "makerAddress"
+	FromAddress = "senderAddress"
 	OrderHash   = "orderHash"
 	
+	MakerAssetAmount = "makerAssetAmount"
+	TakerFillAmount  = "takerFillAmount"
+	MakerAddress     = "makerAddress"
+	TakerAddress     = "takerAddress"
 )

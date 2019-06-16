@@ -41,7 +41,7 @@ func (mc ModuleClient) GetTxCmd() *cobra.Command {
 	
 	relayerTxCmd.AddCommand(client.PostCommands(
 		cli.MakeOrderTxCmd(mc.cdc),
-		// cli.TakeOrderTxCmd(mc.cdc),
+		cli.TakeOrderTxCmd(mc.cdc),
 	)...)
 	
 	return relayerTxCmd

@@ -2,8 +2,8 @@ package orders
 
 import (
 	"ibc-marketplace/modules/orders/keeper"
-	"ibc-marketplace/modules/orders/types"
 	"ibc-marketplace/modules/orders/querier"
+	"ibc-marketplace/modules/orders/types"
 )
 
 type (
@@ -18,6 +18,7 @@ var (
 	RegisterCodec         = types.RegisterCodec
 	MsgCreateMakeOrder    = types.NewMsgCreateMakeOrder
 	SignBytesForMakeOrder = types.SignBytesForMakeOrder
+	MsgSubmitTakeOrder    = types.NewMsgSubmitTakeOrder
 )
 
 const (

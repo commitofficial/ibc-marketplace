@@ -16,7 +16,7 @@ func (keeper Keeper) SetMakeOrderByOrderHash(ctx ctypes.Context, baseMakeOrder t
 }
 
 func (keeper Keeper) GetMakeOrderByHash(ctx ctypes.Context, orderHash []byte) (types.BaseMakeOrder, ctypes.Error) {
-	store := ctx.KVStore(keeper.takerStoreKey)
+	store := ctx.KVStore(keeper.makerStoreKey)
 	bz := store.Get(GetMakeOrderKey(orderHash))
 	if bz == nil {
 		return types.BaseMakeOrder{}, ctypes.ErrInternal("orders doesn't exist")

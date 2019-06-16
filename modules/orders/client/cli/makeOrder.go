@@ -15,7 +15,7 @@ import (
 	"ibc-marketplace/modules/orders"
 )
 
-const DefalultPassword = "1234567890"
+const DefalultPassword = "rgukt123"
 
 // GetCmdMakeOrder :
 func MakeOrderTxCmd(cdc *codec.Codec) *cobra.Command {

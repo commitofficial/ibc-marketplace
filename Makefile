@@ -13,11 +13,11 @@ BUILD_TAGS = netgo
 
 all: build install
 
-build: go.sum
+build:
 	GO111MODULE=on go build  $(BUILD_FLAGS)  -o build/relayerd ./cmd/relayerd/
 	GO111MODULE=on go build   $(BUILD_FLAGS) -o build/relayercli ./cmd/relayercli/
 
-install: go.sum
+install:
 	go install -tags "$(BUILD_FLAGS)" ./cmd/relayercli
 	go install -tags "$(BUILD_FLAGS)" ./cmd/relayerd
 

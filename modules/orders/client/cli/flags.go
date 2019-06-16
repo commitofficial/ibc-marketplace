@@ -15,6 +15,7 @@ const (
 	FlagVDFIterations      = "vdfIterations"
 	FlagPage               = "page"
 	FlagPerPage            = "perPage"
+	FlagOrderHash          = "orderHash"
 )
 
 var (
@@ -26,8 +27,10 @@ var (
 	fsVDFProof           = flag.NewFlagSet("", flag.ContinueOnError)
 	fsVDFIterations      = flag.NewFlagSet("", flag.ContinueOnError)
 	fsPage               = flag.NewFlagSet("", flag.ContinueOnError)
-	fsPerPage            = flag.NewFlagSet("", flag.ContinueOnError)
-	fsTakerFillAmount    = flag.NewFlagSet("", flag.ContinueOnError)
+	fsOrderHash          = flag.NewFlagSet("", flag.ContinueOnError)
+	
+	fsPerPage         = flag.NewFlagSet("", flag.ContinueOnError)
+	fsTakerFillAmount = flag.NewFlagSet("", flag.ContinueOnError)
 )
 
 func init() {
@@ -41,4 +44,6 @@ func init() {
 	fsPage.String(FlagPage, "", "which page you want to access")
 	fsPerPage.String(FlagPerPage, "", "per page how many you want to get")
 	fsTakerFillAmount.String(FlagTakerFillAmount, "", "fill amount of taker of given order")
+	fsOrderHash.String(FlagOrderHash, "", "order hash")
+	
 }
