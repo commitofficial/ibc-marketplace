@@ -1,7 +1,7 @@
 package ibc
 
 import (
-	ctypes "github.com/comdex-blockchain/types"
+	ctypes "github.com/cosmos/cosmos-sdk/types"
 	
 	"github.com/ibc-marketplace/modules/orders"
 )
@@ -19,10 +19,19 @@ type IBCPacket struct {
 
 type MsgIBCExchangeOrder struct {
 	IBCPacket
-	Relayer ctypes.AccAddress
+	Relayer  ctypes.AccAddress
+	Sequence uint64
 }
 
 var _ ctypes.Msg = MsgIBCExchangeOrder{}
+
+func NewMsgIBCExchangeOrder(ibcPacket IBCPacket, relayer ctypes.AccAddress, sequence uint64) MsgIBCExchangeOrder {
+	return MsgIBCExchangeOrder{
+		IBCPacket: ibcPacket,
+		Relayer:   relayer,
+		Sequence:  sequence,
+	}
+}
 
 func (msg MsgIBCExchangeOrder) Type() string         { return Exchange }
 func (msg MsgIBCExchangeOrder) Route() string        { return RouteKey }

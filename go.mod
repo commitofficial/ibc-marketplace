@@ -16,14 +16,14 @@ require (
 	github.com/deckarep/golang-set v1.7.1 // indirect
 	github.com/dgryski/go-sip13 v0.0.0-20190329191031-25c5027a8c7b // indirect
 	github.com/edsrzf/mmap-go v1.0.0 // indirect
-	github.com/ethereum/go-ethereum v1.8.27
+	github.com/ethereum/go-ethereum v1.8.27 // indirect
 	github.com/fjl/memsize v0.0.0-20180929194037-2a09253e352a // indirect
 	github.com/golang/mock v1.3.1 // indirect
 	github.com/google/go-cmp v0.3.0 // indirect
 	github.com/google/gofuzz v1.0.0 // indirect
 	github.com/google/pprof v0.0.0-20190515194954-54271f7e092f // indirect
 	github.com/google/uuid v1.1.1 // indirect
-	github.com/gorilla/mux v1.7.2
+	github.com/gorilla/mux v1.7.2 // indirect
 	github.com/huin/goupnp v1.0.0 // indirect
 	github.com/jackpal/go-nat-pmp v1.0.1 // indirect
 	github.com/jessevdk/go-flags v1.4.0 // indirect
@@ -40,7 +40,7 @@ require (
 	github.com/otiai10/curr v0.0.0-20190513014714-f5a3d24e5776 // indirect
 	github.com/pborman/uuid v1.2.0 // indirect
 	github.com/pelletier/go-toml v1.4.0 // indirect
-	github.com/prometheus/common v0.4.1
+	github.com/prometheus/common v0.4.1 // indirect
 	github.com/prometheus/procfs v0.0.0-20190528151240-3cb620ac02d0 // indirect
 	github.com/rakyll/statik v0.1.6
 	github.com/rcrowley/go-metrics v0.0.0-20181016184325-3113b8401b8a // indirect
@@ -51,10 +51,8 @@ require (
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/spf13/afero v1.2.2 // indirect
 	github.com/spf13/cobra v0.0.4
-	github.com/spf13/pflag v1.0.3
 	github.com/spf13/viper v1.4.0
 	github.com/stretchr/objx v0.2.0 // indirect
-	github.com/stretchr/testify v1.3.0
 	github.com/tendermint/go-amino v0.14.1
 	github.com/tendermint/iavl v0.12.2 // indirect
 	github.com/tendermint/tendermint v0.31.5 //indirect
