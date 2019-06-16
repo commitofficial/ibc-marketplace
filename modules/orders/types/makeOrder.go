@@ -32,7 +32,7 @@ type BaseMakeOrder struct {
 	MakerAddress     ctypes.AccAddress
 	TakerAddress     ctypes.AccAddress
 	ExpirationHeight int64
-	OrderHash        []byte
-	Signature        []byte
+	OrderHash        string
+	Signature        string
 	Status           OrderStatus
 }
